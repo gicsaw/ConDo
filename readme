@@ -1,0 +1,84 @@
+
+ConDo (Contact based Domain boundary prediction) was developed by Seung Hwan Hong
+E-mail: shhong@kias.re.kr
+version 0.5
+
+paper: Protein Domain boundary prediction using Co-evolutionary information (in preparation for submission)
+
+########## dependency ##############
+
+PSIBLAST:
+https://blast.ncbi.nlm.nih.gov
+
+HHblitz:
+https://github.com/soedinglab/hh-suite.git
+
+PSIPRED:
+http://bioinfadmin.cs.ucl.ac.uk/downloads/psipred/
+
+SANN:
+https://lee.kias.re.kr
+
+Jackhmmer:
+http://hmmer.org/
+! must install hmmer/easel   (enclosed in hmmer)
+! UniRef90  https://www.uniprot.org/downloads
+
+CCMPRED:
+https://github.com/soedinglab/CCMpred
+
+python2
+numpy
+KERAS with TF or theano 
+gcc or icc
+
+
+############################ generate features #########################
+feature.c 
+compile:
+
+         gcc src/feature.c -o bin/feature -lm -fopenmp -O2
+or       icc src/feature.c -o bin/feature -qopenmp -O2
+
+run:    feature $target $Ncpu
+
+Input files are: 
+$target.fasta    # target sequence
+$target.ss2      # Secondary Structure predicted by PSIPRED
+$target.a22      # Solvent Accessibility predicted by SANN
+$target.a3       # Solvent Accessibility by SANN
+$target.ck2      # sequence profile converted from chk of blast or hhblits
+$target.msa      # multiple sequence alignment converted by    of Jackhammer 
+$target.ccmpred  # predicted contact by CCMPRED
+
+Outout files are
+$target_feature.txt  # input features for machine
+$target_PAS3.txt     # PAS information 
+result_ccm2.txt      # predicted contact after filtering 
+community_ccm2.txt   # Modularity of predicted contact
+
+How to show 
+In gnuplot,
+set size square
+plot $target_PAS3.txt u 1:2:3, w image
+plot result_ccm2.txt u 1:2:3, w image
+plot community_ccm2.txt u 1:2 w lp
+
+########################## How to run #########################
+
+You need to set up the paths for programs and databases path of bash script (.sh) in bin directory
+
+ConDo.sh  
+run_jackhmmer.sh 
+gen_features.sh 
+run_ccmpred.sh
+
+run: 
+Condo.sh target.fasta $ncpu
+
+Output file is $target.ConDo
+First and second columns of the output file are residue index and domain boundary score, respectively
+The cut-off of score is 1.4 
+In gnuplot, 
+plot "$target.ComDo" u 1:2 w lp, 1.4
+
