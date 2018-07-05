@@ -1,0 +1,36 @@
+Reformatted 1c7cA.a2m with 12248 sequences from a2m to fas and written to file 1c7cA.hmm.fas
+9981 12226 0.152
+Nalign: 9981
+Running CCMpred...
+ Protein Solvent Accessibility Prediction Using Nearest Neighbor Method
+ Keehyoung Joo at KIAS <newton@kias.re.kr>
+ sapred with parameter (k,e)=          62   6.48000002    
+ dbhome= /home/shade/Programs/sann/nndb
+ 
+ target code= 1c7cA
+ naa=          283
+ seq= MLSPADKTNVKAAWGKVGAHAGEYGAEALERMFLSFPTTKTYFPHFDLSHGSAQVKGHGKKVADALTNAVAHVDDMPNALSALSDLHAHKLRVDPVNFKLLSHCLLVTLAAHLPAEFTPAVHASLDKFLASVSTVLTSKYRGVLSPADKTNVKAAWGKVGAHAGEYGAEALERMFLSFPTTKTYFPHFDLSHGSAQVKGHGKKVADALTNAVAHVDDMPNALSALSDLHAHKLRVDPVNFKLLSHCLLVTLAAHLPAEFTPAVHASLDKFLASVSTVLTSKYR
+ 
+ number of processors used for calculation=           8
+ I am a processor            7
+ I am a processor            0
+ I am a processor            4
+ I am a processor            5
+ I am a processor            3
+ I am a processor            2
+ I am a processor            1
+ I am a processor            6
+ reading database is done...   5.41199970      seconds
+ Elapsed_time...   299.447998     seconds
+ Done... Good luck! ^^
+target: 1c7cA
+Ncpu: 8
+Thu Jul  5 22:46:12 2018
+Nres: 283
+Nmsa: 12226 dmsa: 1.000000 
+Npas: 12054 dpas: 1.000000 rpas: 0.985932 
+ccm_cutoff: 0.283339
+Thu Jul  5 22:46:13 2018
+h : 0 m : 0 s : 1 
+[144, 145]
+1c7cA: multi-domain

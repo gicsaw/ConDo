@@ -256,7 +256,7 @@ double **read_sa2(char *target, int Nres )
     double rsa, tsa, sab,sai,sae,con;
     double **sa2;
 
-    sa2=darray2(Nres,3);
+    sa2=darray2(Nres,4);
     sprintf(filename,"%s.a22",target);
     fp=fopen(filename, "r");
 

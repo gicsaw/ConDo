@@ -1,0 +1,37 @@
+Reformatted 1sxjH.a2m with 12557 sequences from a2m to fas and written to file 1sxjH.hmm.fas
+9991 12450 0.135802469136
+Nalign: 9991
+Running CCMpred...
+ Protein Solvent Accessibility Prediction Using Nearest Neighbor Method
+ Keehyoung Joo at KIAS <newton@kias.re.kr>
+ sapred with parameter (k,e)=          62   6.48000002    
+ dbhome= /home/shade/Programs/sann/nndb
+ 
+ target code= 1sxjH
+ naa=          283
+ seq= MGSSHHHHHHSSGLEVLFQGPHMASMLEAKFEEASLFKRIIDGFKDCVQLVNFQCKEDGIIAQAVDDSRVLLVSLEIGVEAFQEYRCDHPVTLGMDLTSLSKILRCGNNTDTLTLIADNTPDSIILLFEDTKKDRIAEYSLKLMDIDADFLKIEELQYDSTLSLPSSEFSKIVRDLSQLSDSINIMITKETIKFVADGDIGSGSVIIKPFVDMEHPETSIKLEMDQPVDLTFGAKYLLDIIKGSSLSDRVGIRLSSEAPALFQFDLKSGFLQFFLAPKFNDEE
+ 
+ number of processors used for calculation=           8
+ I am a processor            6
+ I am a processor            7
+ I am a processor            3
+ I am a processor            0
+ I am a processor            1
+ I am a processor            2
+ I am a processor            4
+ I am a processor            5
+ reading database is done...   5.44400024      seconds
+ Elapsed_time...   302.196014     seconds
+ Done... Good luck! ^^
+target: 1sxjH
+Ncpu: 8
+Thu Jul  5 23:11:24 2018
+Nres: 283
+Nmsa: 12450 dmsa: 1.000000 
+Npas: 12206 dpas: 1.000000 rpas: 0.980402 
+ccm_cutoff: 0.230048
+Thu Jul  5 23:11:25 2018
+h : 0 m : 0 s : 1 
+[22, 23]
+[154, 155]
+1sxjH: multi-domain
