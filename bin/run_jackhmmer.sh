@@ -2,9 +2,9 @@
 
 # set directory and file path
 hhpath=/usr/local/hh-suite
-condodir=~/Programs/ConDo
+condodir=~/ConDo
 condobin=$condodir/bin
-database=~/Database/uniref/20180131/uniref90.fasta
+database=/home1/shade/Database/uniref/20180131/uniref90.fasta
 jackhmmerbin=~/Programs/hmmer/bin
 
 export HHLIB=$hhpath

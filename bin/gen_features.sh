@@ -15,7 +15,7 @@ psipred=~/Programs/psipred
 psipredbin=$psipred/bin
 psipreddata=$psipred/data
 
-condodir=~/Programs/ConDo
+condodir=~/ConDo
 condobin=$condodir/bin
 condodata=$condodir/data
 

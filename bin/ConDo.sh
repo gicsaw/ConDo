@@ -1,10 +1,10 @@
 #!/bin/bash 
 
-#ConDo target.fasta ncpu
+#condo target.fasta ncpu
 
-ConDodir=$HOME/Programs/ConDo
-ConDobin=$ConDodir/bin
-weight_file=$ConDodir/data/weight.h5
+condodir=$HOME/ConDo
+condobin=$condodir/bin
+weight_file=$condodir/data/weight.h5
 target=${1%.*}
 
 if [ $# -eq 1 ]
@@ -19,14 +19,14 @@ if [ ! -e $target.fasta ]; then
     exit
 fi
 
-$ConDobin/run_jackhmmer.sh $target $nprocessor
+$condobin/run_jackhmmer.sh $target $nprocessor
 
 if [ ! -e $target.aln ]; then
     echo ">>$target.aln is not exist " 
     exit
 fi
-$ConDobin/run_ccmpred.sh $target $nprocessor
-$ConDobin/gen_features.sh $target $nprocessor
+$condobin/run_ccmpred.sh $target $nprocessor
+$condobin/gen_features.sh $target $nprocessor
 if [ ! -e $target.ss2 ]; then
     echo ">>$target.ss2 is not exist " 
     echo ">>check PSIPRED"
@@ -53,19 +53,19 @@ if [ ! -e $target.ccmpred ]; then
     exit
 fi
 
-$ConDobin/feature $target $nprocessor
+$condobin/feature $target $nprocessor
 if [ ! -e $target"_feature.txt" ]; then
     echo ">>$target"_feature.txt" is not exist "
     echo ">>check feature "
     exit
 fi
 
-$ConDobin/gather_input.py $target
+$condobin/gather_input.py $target
 #keras with TF or theano (CPU)
-$ConDobin/prediction.py data_feature.dat.npz y_pred.dat.npz $weight_file
+$condobin/prediction.py data_feature.dat.npz y_pred.dat.npz $weight_file
 # GPU for theano
-#THEANO_FLAGS=device=cuda,floatX=float32, python $ConDobin/prediction.py data_feature.dat.npz y_pred.dat.npz $weight_file
+#THEANO_FLAGS=device=cuda,floatX=float32, python $condobin/prediction.py data_feature.dat.npz y_pred.dat.npz $weight_file
 
 conf_cut=1.4
-$ConDobin/gen_results.py $target $conf_cut
+$condobin/gen_results.py $target $conf_cut
 
