@@ -3,8 +3,9 @@ Contact based protein Domain boundary prediction method
 
 # Pre-requisite:
 
-PSIBLAST: ftp://ftp.ncbi.nlm.nih.gov/blast/executables/legacy.NOTSUPPORTED/2.2.26/ 
-! (do not use blast+) with sqeucne database such as UniRef or NR 
+PSIBLAST: ftp://ftp.ncbi.nlm.nih.gov/blast/executables/legacy.NOTSUPPORTED/2.2.26/
+! (is not blast+)
+!  with sqeucne database such as UniRef or NR 
 
 HHblitz: https://github.com/soedinglab/hh-suite.git
 
@@ -30,7 +31,7 @@ KERAS with TensorFlow or theano
 
 gcc or icc
 
-#Installation:
+# Installation:
 
 git clone https://github.com/gicsaw/ConDo
 
@@ -48,7 +49,7 @@ Edit blastbin, dbname, psipred, condodir, sann, NNDB_HOME variables in bin/gen_f
 
 Edit ccmpredbindir variables in bin/run_ccmpred.sh
 
-#Run a example:
+# Run examples:
 We prepared two targets such as 1c7cA and 1sxjH in examples dir
 
 cd examples/$target   !replace $target to 1c7cA or 1sxjH
@@ -65,7 +66,7 @@ The cut-off of score is 1.4
 In gnuplot, plot "$target.ComDo" u 1:2 w lp, 1.4
 
 
-#etc: 
+# etc: 
 bin/feature # generate input features of Machine learning and some other output files such as PAS, contact mat, modularity of contact. 
 
 Input files are: 
