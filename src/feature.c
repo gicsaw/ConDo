@@ -1336,7 +1336,7 @@ int main(int argc, char *argv[])
     {
         dmsa=0.0;
     }
-    else if (Nmsa<10000)
+    else if (Nmsa<100000)
     {
         dmsa= log10(Nmsa)/5.0;
     }
@@ -1349,7 +1349,7 @@ int main(int argc, char *argv[])
     {
         dpas=0.0;
     }
-    else if (Npasinfo<10000)
+    else if (Npasinfo<100000)
     {
         dpas=log10(Npasinfo)/5.0;
     }

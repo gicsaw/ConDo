@@ -79,6 +79,8 @@ def main ():
     target= sys.argv[1]
 
     conf_cut=1.4
+    if len(sys.argv)==3:
+        conf_cut=float(sys.argv[2])
     gen_results(target,conf_cut)
 
 if __name__ == '__main__':
