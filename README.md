@@ -52,7 +52,9 @@ Edit ccmpredbindir variables in bin/run_ccmpred.sh
 # Run examples:
 We prepared two targets such as 1c7cA and 1sxjH in examples dir
 
-cd examples/$target   !replace $target to 1c7cA or 1sxjH
+!replace $target to 1c7cA or 1sxjH
+
+cd examples/$target   
 
 Condo.sh $target.fasta $ncpu 
 
@@ -66,7 +68,7 @@ The cut-off of score is 1.4
 In gnuplot, plot "$target.ComDo" u 1:2 w lp, 1.4
 
 
-# etc: 
+# Etc: 
 bin/feature # generate input features of Machine learning and some other output files such as PAS, contact mat, modularity of contact. 
 
 Input files are: 
