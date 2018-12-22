@@ -3,7 +3,8 @@ Contact based protein Domain boundary prediction method
 
 # Pre-requisite:
 
-PSIBLAST: ftp://ftp.ncbi.nlm.nih.gov/blast/executables/legacy.NOTSUPPORTED/2.2.26/
+PSIBLAST: ftp://ftp.ncbi.nlm.nih.gov/blast/executables/legacy.NOTSUPPORTED/2.2.26
+
 ! (is not blast+)
 !  with sqeucne database such as UniRef or NR 
 
