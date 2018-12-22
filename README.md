@@ -108,3 +108,10 @@ plot result_ccm2.txt u 1:2:3 w image
 
 plot community_ccm2.txt u 1:2 w lp
 
+# References:
+
+Hong, Seung Hwan, Keehyoung Joo, and Jooyoung Lee. "ConDo: Protein domain boundary prediction using coevolutionary information." Bioinformatics (2018).
+
+https://academic.oup.com/bioinformatics/advance-article-abstract/doi/10.1093/bioinformatics/bty973/5221017
+
+
