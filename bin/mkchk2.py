@@ -36,7 +36,7 @@ def read_qij(file):
             qij[i,j] = qij[i,j]/sum
     return qij
 
-def read_chk(file):
+def read_chk(file,qij):
     file = open(chkfile,mode='rb')
     n = array.array('i')
     n.read(file, 1)
@@ -74,10 +74,10 @@ if __name__ == '__main__':
     chkfile= name+'.chk'
 # Read Data and Transformation
     b62file = sys.argv[2]
-    b62 = read_qij(b62file)
-#print b62
+    qij = read_qij(b62file)
+#print qij
 
-    naa, seq, out, col, quality = read_chk(chkfile)
+    naa, seq, out, col, quality = read_chk(chkfile,qij)
     ck2file = open(name+'.ck2','w')
     print >> ck2file, naa
     print >> ck2file, seq
